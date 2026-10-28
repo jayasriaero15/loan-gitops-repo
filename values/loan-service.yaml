@@ -1,0 +1,14 @@
+appName: loan-service
+version: v1
+replicaCount: 2
+image:
+  repository: asia-south1-docker.pkg.dev/project-76f55662-b24c-481a-88e/spring-app-repo/loan-service
+  tag: "1.2.0"
+env:
+  SERVICES_CUSTOMER_URL: http://customer-service:8080
+  SERVICES_DOCUMENT_URL: http://document-service:8080
+  SERVICES_NOTIFICATION_URL: http://notification-service:8080
+  DB_URL: jdbc:postgresql://postgres:5432/loansdb
+secretEnv:
+  - { name: DB_USER,     secretName: postgres-credentials, key: DB_USER }
+  - { name: DB_PASSWORD, secretName: postgres-credentials, key: DB_PASSWORD }
