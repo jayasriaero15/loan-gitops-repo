@@ -5,7 +5,7 @@ image:
   repository: asia-south1-docker.pkg.dev/project-76f55662-b24c-481a-88e/spring-app-repo/customer-service
   tag: latest
 env:
-  DB_URL: jdbc:postgresql://postgres:5432/loansdb
+  DB_URL: jdbc:postgresql://34.93.226.154:5432/loansdb
 secretEnv:
   - { name: DB_USER,     secretName: postgres-credentials, key: DB_USER }
   - { name: DB_PASSWORD, secretName: postgres-credentials, key: DB_PASSWORD }
