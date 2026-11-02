@@ -8,7 +8,7 @@ env:
   SERVICES_CUSTOMER_URL: http://customer-service:8080
   SERVICES_DOCUMENT_URL: http://document-service:8080
   SERVICES_NOTIFICATION_URL: http://notification-service:8080
-  DB_URL: jdbc:postgresql://postgres:5432/loansdb
+  DB_URL: jdbc:postgresql://34.93.226.154:5432/loansdb
 secretEnv:
   - { name: DB_USER,     secretName: postgres-credentials, key: DB_USER }
   - { name: DB_PASSWORD, secretName: postgres-credentials, key: DB_PASSWORD }
