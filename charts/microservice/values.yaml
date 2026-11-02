@@ -24,8 +24,8 @@ env: {}
 secretEnv: []
 
 probes:
-  liveness:  { path: /actuator/health/liveness,  initialDelaySeconds: 40, periodSeconds: 10 }
-  readiness: { path: /actuator/health/readiness, initialDelaySeconds: 20, periodSeconds: 5 }
+  liveness:  { path: /actuator/health/liveness,  initialDelaySeconds: 120, periodSeconds: 20 }
+  readiness: { path: /actuator/health/readiness, initialDelaySeconds: 90, periodSeconds: 10 }
 
 metrics:
   enabled: true
